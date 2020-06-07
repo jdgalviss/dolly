@@ -29,14 +29,26 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
+    pkg_dolly_common = get_package_share_directory('dolly_common')
     pkg_dolly_gazebo = get_package_share_directory('dolly_gazebo')
 
     # Gazebo launch
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py'),
-        )
+        ),
     )
+
+    # Spawn dolly
+    spawn = Node(package='gazebo_ros', node_executable='spawn_entity.py',
+            arguments=[
+                '-entity', 'dolly',
+                '-database', 'dolly_gazebo',
+                '-spawn_service_timeout', '60',
+                '-x', '-37',
+                '-y', '5.6',
+                '-z', '0.33'],
+            output='screen')
 
     # Follow node
     follow = Node(
@@ -53,18 +65,19 @@ def generate_launch_description():
     rviz = Node(
         package='rviz2',
         node_executable='rviz2',
-        arguments=['-d', os.path.join(pkg_dolly_gazebo, 'rviz', 'dolly_gazebo.rviz')],
+        arguments=['-d', os.path.join(pkg_dolly_common, 'rviz', 'dolly_gazebo.rviz')],
         condition=IfCondition(LaunchConfiguration('rviz'))
     )
 
     return LaunchDescription([
         DeclareLaunchArgument(
           'world',
-          default_value=[os.path.join(pkg_dolly_gazebo, 'worlds', 'dolly_empty.world'), ''],
+          default_value=[os.path.join(pkg_dolly_common, 'worlds', 'dolly_city.world'), ''],
           description='SDF world file'),
         DeclareLaunchArgument('rviz', default_value='true',
                               description='Open RViz.'),
         gazebo,
+        spawn,
         follow,
         rviz
     ])

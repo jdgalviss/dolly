@@ -6,6 +6,18 @@ Packages for launching Dolly demo, which uses Gazebo and ROS 2.
 
 ![Dolly city](dolly.gif)
 
+## Packages
+
+This repository contains the following packages:
+
+* `dolly`: Metapackage that install all other packages.
+* `dolly_follow`: simulation-agnostic code that generates velocity commands
+                  based on laser sensor readings.
+* `dolly_common`: Helpers for running simulation. It's simulator-agnostic.
+* `dolly_gazebo`: Launch Dolly in a Gazebo simulation.
+
+## Versions
+
 Dolly has been tested on:
 
 * ROS 2 version:
@@ -24,15 +36,16 @@ Install instructions for Ubuntu Bionic.
 
 1. Install the appropriate ROS 2 version as instructed [here](https://index.ros.org/doc/ros2/Installation/Linux-Install-Debians/).
 
-1. Install `gazebo_ros_pkgs`, which also installs Gazebo. Substitute `<distro>` with `crystal` or `dashing`:
-
-        sudo apt install ros-<distro>-gazebo-ros-pkgs
-
 1. Clone Dolly:
 
         mkdir -p ~/ws/src
         cd ~/ws/src
         git clone https://github.com/chapulina/dolly
+
+1. Install dependencies:
+
+        cd ~/ws
+        rosdep install --from-paths src --ignore-src -r -y
 
 1. Build and install:
 
@@ -52,7 +65,7 @@ Install instructions for Ubuntu Bionic.
 
 1. Launch Dolly in an empty world:
 
-        ros2 launch dolly_gazebo dolly.launch.py world:=dolly_empty.world
+        ros2 launch dolly_gazebo dolly.launch.py
 
 ## Packages
 

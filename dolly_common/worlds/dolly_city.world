@@ -4475,15 +4475,10 @@
       <uri>model://suv</uri>
     </include>
 
-    <!-- Dolly -->
-      <include>
-        <pose>-37 5.6 0.33 0 0 0</pose>
-        <uri>model://dolly</uri>
-      </include>
-      <include>
-        <pose>-35 5.6 0.14 0 0 1.57</pose>
-        <uri>model://casual_female</uri>
-      </include>
+    <include>
+      <pose>-35 5.6 0.14 0 0 1.57</pose>
+      <uri>model://casual_female</uri>
+    </include>
 
   </world>
 </sdf>
