@@ -1,20 +1,10 @@
 # Dolly the robot
 
-_It's a sheep, it's a dolly, it's a following robot. Clone Dolly now!_
+_It's a sheep, it's a dolly, it's a following robot. Dolly was born to be cloned._
 
 Packages for launching Dolly demo, which uses Gazebo and ROS 2.
 
 ![Dolly city](dolly.gif)
-
-## Packages
-
-This repository contains the following packages:
-
-* `dolly`: Metapackage that install all other packages.
-* `dolly_follow`: simulation-agnostic code that generates velocity commands
-                  based on laser sensor readings.
-* `dolly_common`: Helpers for running simulation. It's simulator-agnostic.
-* `dolly_gazebo`: Launch Dolly in a Gazebo simulation.
 
 ## Versions
 
@@ -61,19 +51,21 @@ Install instructions for Ubuntu Bionic.
 
 1. Launch Dolly in a city (this will take some time to download models):
 
-        ros2 launch dolly_gazebo dolly.launch.py world:=dolly_city.world
+        ros2 launch dolly_gazebo dolly.launch.py
 
 1. Launch Dolly in an empty world:
 
-        ros2 launch dolly_gazebo dolly.launch.py
+        ros2 launch dolly_gazebo dolly.launch.py world:=empty.world
 
 ## Packages
 
-This repository contains 2 packages:
+This repository contains the following packages:
 
 * `dolly`: Metapackage which provides all other packages.
-* `dolly_follow`: Provides node with follow logic.
-* `dolly_gazebo`: Robot model, simulation world and launch scripts.
+* `dolly_follow`: Simulation-agnostic code that generates velocity commands
+                  based on laser sensor readings.
+* `dolly_common`: Helpers for running simulation. It's simulator-agnostic.
+* `dolly_gazebo`: Launch Dolly in a Gazebo simulation.
 
 # TODO
 
