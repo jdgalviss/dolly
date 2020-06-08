@@ -1,4 +1,4 @@
-# Copyright 2019 Louise Poubel
+# Copyright 2020 Louise Poubel
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,27 +28,27 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
+    pkg_ros_ign_gazebo = get_package_share_directory('ros_ign_gazebo')
     pkg_dolly_common = get_package_share_directory('dolly_common')
     pkg_dolly_gazebo = get_package_share_directory('dolly_gazebo')
 
     # Gazebo launch
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py'),
+            os.path.join(pkg_ros_ign_gazebo, 'launch', 'ign_gazebo.launch.py'),
         ),
     )
 
     # Spawn dolly
-    spawn = Node(package='gazebo_ros', node_executable='spawn_entity.py',
-            arguments=[
-                '-entity', 'dolly',
-                '-database', 'dolly_gazebo',
-                '-spawn_service_timeout', '60',
-                '-x', '-37',
-                '-y', '5.6',
-                '-z', '0.33'],
-            output='screen')
+    #spawn = Node(package='ros_ign_gazebo', node_executable='spawn_entity.py',
+    #        arguments=[
+    #            '-entity', 'dolly',
+    #            '-database', 'dolly_gazebo',
+    #            '-spawn_service_timeout', '60',
+    #            '-x', '-37',
+    #            '-y', '5.6',
+    #            '-z', '0.33'],
+    #        output='screen')
 
     # Follow node
     follow = Node(
@@ -61,6 +61,15 @@ def generate_launch_description():
         ]
     )
 
+    # Bridge
+    bridge = Node(
+        package='ros_ign_bridge',
+        node_executable='parameter_bridge',
+        arguments=['/model/dolly/cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist',
+                   '/model/dolly/odometry@nav_msgs/msg/Odometry@ignition.msgs.Odometry'],
+        output='screen'
+    )
+
     # RViz
     rviz = Node(
         package='rviz2',
@@ -71,13 +80,14 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument(
-          'world',
+          'args',
           default_value=[os.path.join(pkg_dolly_common, 'worlds', 'dolly_city.sdf'), ''],
           description='SDF world file'),
         DeclareLaunchArgument('rviz', default_value='true',
                               description='Open RViz.'),
         gazebo,
-        spawn,
+        #spawn,
         follow,
+        bridge,
         rviz
     ])
