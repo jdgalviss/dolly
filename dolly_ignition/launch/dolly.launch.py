@@ -30,7 +30,7 @@ def generate_launch_description():
 
     pkg_ros_ign_gazebo = get_package_share_directory('ros_ign_gazebo')
     pkg_dolly_common = get_package_share_directory('dolly_common')
-    pkg_dolly_gazebo = get_package_share_directory('dolly_gazebo')
+    pkg_dolly_ignition = get_package_share_directory('dolly_ignition')
 
     # Gazebo launch
     gazebo = IncludeLaunchDescription(
@@ -43,7 +43,7 @@ def generate_launch_description():
     #spawn = Node(package='ros_ign_gazebo', node_executable='spawn_entity.py',
     #        arguments=[
     #            '-entity', 'dolly',
-    #            '-database', 'dolly_gazebo',
+    #            '-database', 'dolly_ignition',
     #            '-spawn_service_timeout', '60',
     #            '-x', '-37',
     #            '-y', '5.6',
@@ -74,7 +74,7 @@ def generate_launch_description():
     rviz = Node(
         package='rviz2',
         node_executable='rviz2',
-        arguments=['-d', os.path.join(pkg_dolly_common, 'rviz', 'dolly_gazebo.rviz')],
+        arguments=['-d', os.path.join(pkg_dolly_common, 'rviz', 'dolly_ignition.rviz')],
         condition=IfCondition(LaunchConfiguration('rviz'))
     )
 
