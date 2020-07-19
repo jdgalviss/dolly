@@ -59,8 +59,8 @@
             </blend>
 
             <texture>
-              <diffuse>model://city_terrain/materials/textures/forest.jpg</diffuse>
-              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <normal>model://city_terrain/materials/textures/forest.jpg</normal>
+              <!-- <normal>file://media/materials/textures/flat_normal.png</normal> -->
               <size>10</size>
             </texture>
 
