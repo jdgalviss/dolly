@@ -70,9 +70,9 @@
         <pose>0.5 0 0.4 0 0 0</pose>
         <update_rate>5.0</update_rate>
         <camera name="head">
-          <horizontal_fov>1.3962634</horizontal_fov>
+          <horizontal_fov>1.74533</horizontal_fov>
           <image>
-            <width>640</width>
+            <width>720</width>
             <height>480</height>
             <format>R8G8B8</format>
           </image>
