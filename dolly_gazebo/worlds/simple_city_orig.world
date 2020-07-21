@@ -91,7 +91,7 @@
     <light type="directional" name="sun">
       <pose>0 0 1000 0 0 0</pose>
       <cast_shadows>true</cast_shadows>
-      <diffuse>0.4 0.4 0.4 1</diffuse>
+      <diffuse>0.25 0.25 0.25 1</diffuse>
       <specular>0.3 0.3 0.3 1</specular>
       <attenuation>
         <range>1000</range>
@@ -963,7 +963,7 @@
         </polyline>
       </geometry>
       <material>
-        <ambient>0.4 0.4 0.4 1.0</ambient>
+        <ambient>0.8 0.8 0.8 1.0</ambient>
       </material>
     </visual>
   </link>
@@ -1037,7 +1037,7 @@
         </polyline>
       </geometry>
       <material>
-        <ambient>0.4 0.4 0.4 1.0</ambient>
+        <ambient>0.8 0.8 0.8  1.0</ambient>
       </material>
     </visual>
   </link>
@@ -1113,7 +1113,7 @@
         </polyline>
       </geometry>
       <material>
-        <ambient>0.4 0.4 0.4 1.0</ambient>
+        <ambient>0.8 0.8 0.8  1.0</ambient>
       </material>
     </visual>
   </link>
@@ -1188,7 +1188,7 @@
         </polyline>
       </geometry>
       <material>
-        <ambient>0.4 0.4 0.4 1.0</ambient>
+        <ambient>0.8 0.8 0.8  1.0</ambient>
       </material>
     </visual>
   </link>
