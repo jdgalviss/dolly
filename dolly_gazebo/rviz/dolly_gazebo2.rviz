@@ -71,7 +71,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.07999999821186066
       Style: Flat Squares
-      Topic: /dolly/laser/out
+      Topic: /vision/image_segmented/scan
       Unreliable: true
       Use Fixed Frame: true
       Use rainbow: true
@@ -155,25 +155,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 18.648193359375
+      Distance: 6.706534385681152
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.8779783248901367
-        Y: 0.15285056829452515
-        Z: 0.762141764163971
+        X: -0.3484661877155304
+        Y: 0.16809554398059845
+        Z: 2.8386313915252686
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5202025771141052
+      Pitch: 0.685202419757843
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.827219009399414
+      Yaw: 2.997210741043091
     Saved: ~
 Window Geometry:
   Displays:
