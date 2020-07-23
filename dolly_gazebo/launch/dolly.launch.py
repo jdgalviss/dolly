@@ -45,7 +45,7 @@ def generate_launch_description():
         output='screen',
         remappings=[
             ('cmd_vel', '/dolly/cmd_vel'),
-            ('laser_scan', '/dolly/laser/out')
+            ('laser_scan', '/dolly/laser/out2')
         ]
     )
 
