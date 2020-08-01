@@ -10,6 +10,7 @@ Panels:
         - /Image1
         - /Image2
         - /Image3
+        - /Odometry1
       Splitter Ratio: 0.5
     Tree Height: 197
   - Class: rviz_common/Selection
@@ -129,10 +130,44 @@ Visualization Manager:
       Topic: /vision/image_segmented/warped
       Unreliable: false
       Value: true
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz_default_plugins/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: false
+      Enabled: true
+      Keep: 100
+      Name: Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Axes
+      Topic: /dolly/odom
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 207; 207; 207
-    Fixed Frame: chassis
+    Fixed Frame: odom_demo
     Frame Rate: 30
   Name: root
   Tools:
@@ -155,16 +190,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 6.706534385681152
+      Distance: 43.84839630126953
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.3484661877155304
-        Y: 0.16809554398059845
-        Z: 2.8386313915252686
+        X: -12.121588706970215
+        Y: 1.8734468221664429
+        Z: -11.71651554107666
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false

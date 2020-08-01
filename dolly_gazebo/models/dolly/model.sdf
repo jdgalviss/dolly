@@ -38,7 +38,7 @@
           </mesh>
         </geometry>
       </visual>
-      <sensor name="sensor_ray" type="ray">
+      <!-- <sensor name="sensor_ray" type="ray">
         <pose>0.5 0 0 0 0 0</pose>
         <ray>
           <scan>
@@ -56,7 +56,7 @@
         </ray>
         <always_on>true</always_on>
         <visualize>true</visualize>
-        <update_rate>100.0</update_rate>
+        <update_rate>10.0</update_rate>
         <plugin name="laser" filename="libgazebo_ros_ray_sensor.so">
           <ros>
             <namespace>/dolly</namespace>
@@ -64,11 +64,11 @@
           </ros>
           <output_type>sensor_msgs/LaserScan</output_type>
         </plugin>
-      </sensor>
+      </sensor> -->
 
       <sensor type="camera" name="camera">
         <pose>0.5 0 0.4 0 0 0</pose>
-        <update_rate>2.5</update_rate>
+        <update_rate>2.0</update_rate>
         <camera name="head">
           <horizontal_fov>1.74533</horizontal_fov>
           <image>

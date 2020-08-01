@@ -44,7 +44,7 @@ def generate_launch_description():
         node_executable='dolly_follow',
         output='screen',
         remappings=[
-            ('cmd_vel', '/dolly/cmd_vel'),
+            ('cmd_vel', '/dolly/cmd_vel2'),
             ('laser_scan', '/dolly/laser/out2')
         ]
     )
