@@ -38,16 +38,16 @@ def generate_launch_description():
         )
     )
 
-    # Follow node
-    follow = Node(
-        package='dolly_follow',
-        node_executable='dolly_follow',
-        output='screen',
-        remappings=[
-            ('cmd_vel', '/dolly/cmd_vel2'),
-            ('laser_scan', '/dolly/laser/out2')
-        ]
-    )
+    # # Follow node
+    # follow = Node(
+    #     package='dolly_follow',
+    #     node_executable='dolly_follow',
+    #     output='screen',
+    #     remappings=[
+    #         ('cmd_vel', '/dolly/cmd_vel2'),
+    #         ('laser_scan', '/dolly/laser/out2')
+    #     ]
+    # )
 
     # RViz
     rviz = Node(
