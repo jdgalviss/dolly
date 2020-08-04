@@ -13580,7 +13580,7 @@
     
       <actor name="running_2">
         <!-- Starting pose -->
-        <pose>-40.4 5.2 5.76 0 0 1.5707963267948966</pose>
+        <pose>-40.9 5.2 5.76 0 0 1.5707963267948966</pose>
         <skin>
           <filename>model://actor/meshes/SKIN_man_red_shirt.dae</filename>
         </skin>
@@ -13595,27 +13595,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>-40.2 7.2 5.16 0 0 1.5707963267948966</pose>
+                  <pose>-40.9 7.2 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
                 <waypoint>
                   <time>1.9229831381590865</time>
-                  <pose>-40.2 12.12 5.16 0 0 1.5707963267948966</pose>
+                  <pose>-40.9 12.12 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
                 <waypoint>
                   <time>2.115281451974995</time>
-                  <pose>-40.2 12.12 5.16 0 0 4.71238898038469</pose>
+                  <pose>-40.9 12.12 5.16 0 0 4.71238898038469</pose>
                 </waypoint>
               
                 <waypoint>
                   <time>3.845966276318173</time>
-                  <pose>-40.2 7.2 5.16 0 0 4.71238898038469</pose>
+                  <pose>-40.9 7.2 5.16 0 0 4.71238898038469</pose>
                 </waypoint>
               
                 <waypoint>
                   <time>4.038264590134082</time>
-                  <pose>-40.2 7.2 5.16 0 0 1.5707963267948966</pose>
+                  <pose>-40.9 7.2 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
             </trajectory>
