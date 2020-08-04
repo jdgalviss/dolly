@@ -1,6 +1,6 @@
 Panels:
   - Class: rviz_common/Displays
-    Help Height: 97
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
       Expanded:
@@ -11,8 +11,10 @@ Panels:
         - /Image2
         - /Image3
         - /Odometry1
+        - /Odometry1/Shape1
+        - /Path1
       Splitter Ratio: 0.5
-    Tree Height: 197
+    Tree Height: 294
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -42,10 +44,10 @@ Visualization Manager:
       Offset:
         X: 0
         Y: 0
-        Z: 0
+        Z: 5.199999809265137
       Plane: XY
       Plane Cell Count: 50
-      Reference Frame: <Fixed Frame>
+      Reference Frame: odom_demo
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -148,13 +150,13 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Keep: 100
+      Keep: 1
       Name: Odometry
       Position Tolerance: 0.10000000149011612
       Shape:
         Alpha: 1
-        Axes Length: 1
-        Axes Radius: 0.10000000149011612
+        Axes Length: 0.10000000149011612
+        Axes Radius: 0.009999999776482582
         Color: 255; 25; 0
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
@@ -162,6 +164,29 @@ Visualization Manager:
         Shaft Radius: 0.05000000074505806
         Value: Axes
       Topic: /dolly/odom
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Billboards
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /planner/path
       Unreliable: false
       Value: true
   Enabled: true
@@ -190,25 +215,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 43.84839630126953
+      Distance: 18.7347354888916
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -12.121588706970215
-        Y: 1.8734468221664429
-        Z: -11.71651554107666
+        X: -20.326772689819336
+        Y: 21.32430076599121
+        Z: 7.4886908531188965
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.685202419757843
+      Pitch: 1.5597963333129883
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.997210741043091
+      Yaw: 4.387237548828125
     Saved: ~
 Window Geometry:
   Displays:

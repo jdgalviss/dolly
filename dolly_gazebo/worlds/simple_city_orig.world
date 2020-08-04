@@ -10434,9 +10434,9 @@
     <include>
       <name>cardboard_box_417</name>
       <pose>
-      -32
-      8
-      5.01
+      -36.7
+      6.1
+      5.2
       0
       0
       0
@@ -10447,9 +10447,9 @@
     <include>
       <name>cardboard_box_418</name>
       <pose>
-      -33
-      7.5
-      5.01
+      -23.8
+      6.1
+      5.2
       0
       0
       0
@@ -12054,7 +12054,7 @@
     </include>
 
     
-            <include>
+            <!-- <include>
       <name>telephone_pole_536</name>
       <pose>
       -11.3
@@ -12065,7 +12065,7 @@
       3.14
       </pose>
       <uri>model://telephone_pole</uri>
-    </include>
+    </include> -->
 
             <include>
       <name>telephone_pole_537</name>
@@ -12081,7 +12081,7 @@
     </include>
 
     
-            <include>
+            <!-- <include>
       <name>telephone_pole_538</name>
       <pose>
       -18.7
@@ -12092,7 +12092,7 @@
       3.14
       </pose>
       <uri>model://telephone_pole</uri>
-    </include>
+    </include> -->
 
             <include>
       <name>telephone_pole_539</name>
