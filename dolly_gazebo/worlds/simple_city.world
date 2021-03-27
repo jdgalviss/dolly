@@ -71,16 +71,31 @@
       <ambient>0.592 0.624 0.635 1</ambient>
       <sky>
         <clouds>
-          <speed>12</speed>
+          <speed>1</speed>
         </clouds>
       </sky>
       <background>0.35 0.35 0.35 1.0</background>
     </scene>
 
     <physics name='default_physics' default='0' type='ode'>
-      <max_step_size>0.002</max_step_size>
+      <max_step_size>0.0075</max_step_size>
       <real_time_factor>1</real_time_factor>
-      <real_time_update_rate>0</real_time_update_rate>
+      <real_time_update_rate>2000</real_time_update_rate>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>50</iters>
+          <friction_model>cone_model</friction_model>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
     </physics>
 
     <spherical_coordinates>
@@ -143,7 +158,7 @@
       <uri>model://city_terrain</uri>
     </include>
 
-    <include>
+    <!-- <include>
       <name>ocean_2</name>
       <pose>
       40
@@ -154,7 +169,7 @@
       0
       </pose>
       <uri>model://ocean</uri>
-    </include>
+    </include> -->
 
 
     
@@ -5495,7 +5510,7 @@
 
     <!-- North block -->
 
-    <include>
+    <!-- <include>
       <name>parking_garage_73</name>
       <pose>
       146.778
@@ -5506,7 +5521,7 @@
       -1.57
       </pose>
       <uri>model://parking_garage</uri>
-    </include>
+    </include> -->
 
     <include>
       <name>fountain_74</name>
@@ -5731,7 +5746,7 @@
       <uri>model://robocup_3Dsim_field</uri>
     </include>
 
-    <include>
+    <!-- <include>
       <name>bus_91</name>
       <pose>
       133.9
@@ -5755,7 +5770,7 @@
       -1.67
       </pose>
       <uri>model://bus</uri>
-    </include>
+    </include> -->
 
 
     <!-- North road -->
@@ -11059,7 +11074,7 @@
 
     <!-- East block -->
 
-    <include>
+    <!-- <include>
       <name>powerplant_463</name>
       <pose>
       15.57
@@ -11070,7 +11085,7 @@
       3.14
       </pose>
       <uri>model://powerplant</uri>
-    </include>
+    </include> -->
 
     <include>
       <name>reactor_464</name>
@@ -12941,7 +12956,7 @@
       <uri>model://hatchback_red</uri>
     </include>
 
-          <include>
+          <!-- <include>
       <name>pickup_601</name>
       <pose>
       47.550000000000004
@@ -12952,7 +12967,7 @@
       -1.5707963267948966
       </pose>
       <uri>model://pickup</uri>
-    </include>
+    </include> -->
 
     
           <include>
@@ -14007,7 +14022,7 @@
         </script>
       </actor>
     
-      <actor name="car_634">
+      <!-- <actor name="car_634">
         <pose>118.15 -100 5.01 0 0 0</pose>
         <include>
       <name>pickup_635</name>
@@ -14069,12 +14084,12 @@
             
           </trajectory>
         </script>
-      </actor>
+      </actor> -->
     
 
     <!-- Prius -->
 
-    <include>
+    <!-- <include>
       <name>prius_hybrid_123</name>
       <pose> -40 -1.9 5.01 0 0 1.57 </pose>
 
@@ -14107,7 +14122,7 @@
         <frwheel_steering_d_gain>3e2</frwheel_steering_d_gain>
       </plugin>
 
-    </include>
+    </include> -->
 
   </world>
 </sdf>
