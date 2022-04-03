@@ -334,7 +334,7 @@
       <right_joint>right_wheel_joint</right_joint>
       <wheel_separation>1.25</wheel_separation>
       <wheel_radius>0.3</wheel_radius>
-      <topic>/dolly/cmd_vel</topic>
+      <topic>/cmd_vel</topic>
       <odom_topic>/dolly/odometry</odom_topic>
     </plugin>
 

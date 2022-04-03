@@ -53,7 +53,7 @@ def generate_launch_description():
     rviz = Node(
         package='rviz2',
         node_executable='rviz2',
-        arguments=['-d', os.path.join(pkg_dolly_gazebo, 'rviz', 'dolly_gazebo2.rviz')],
+        arguments=['-d', os.path.join(pkg_dolly_gazebo, 'rviz', 'dolly_gazebo.rviz')],
         condition=IfCondition(LaunchConfiguration('rviz'))
     )
 
